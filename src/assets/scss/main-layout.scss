@@ -1,0 +1,100 @@
+.main-layout {
+
+  $mainWidth: 1140px;
+  $toolBarWidth: 240px;
+  $headerItemHeight: 50px;
+  $headerPadding: 20px;
+
+  $headerHeight: $headerItemHeight + $headerPadding*2 + 1;
+
+  .container {
+    width: $mainWidth;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: $headerPadding 0;
+    border-bottom: 1px solid #DCDFE6;
+    .logo {
+      height: $headerItemHeight;
+      width: 200px;
+      background-color: #eee;
+      text-align: center;
+      line-height: $headerItemHeight;
+      font-size: 20px;
+    }
+
+    .menu {
+      .menu-item {
+        height: $headerItemHeight;
+        line-height: $headerItemHeight;
+        font-size: 16px;
+        float: left;
+        a {
+          color: #1989fa;
+          padding: 0 22px;
+          opacity: .6;
+          transition: opacity .4s ease;
+        }
+      }
+
+      .menu-item a:hover,
+      .menu-item.active a{
+        opacity: 1;
+      }
+    }
+
+    .user {
+      height: $headerItemHeight;
+
+      .face-box {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        cursor: pointer;
+
+        .user-face {
+          width: $headerItemHeight;
+          height: $headerItemHeight;
+          background-color: #DCDFE6;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .user-name {
+          color: #333;
+        }
+      }
+
+    }
+
+  }
+
+  .main-content {
+    width: $mainWidth;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    top: $headerHeight;
+
+    .tool-bar {
+      position: absolute;
+      width: $toolBarWidth;
+      bottom: 0;
+      top: 0;
+      left: 0;
+
+      border-right: 1px solid #e6e6e6;
+      .el-menu {
+        border-right: none;
+      }
+    }
+    .show-content {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: $toolBarWidth;
+    }
+  }
+}

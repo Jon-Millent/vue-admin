@@ -1,0 +1,106 @@
+html,body,div,h1,h2,h3,h4,h5,h6,p,img,ul,li,input,span,a,i {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: "microsoft yahei", "HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+img {
+  border: none;
+  vertical-align: top;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input,textarea,button {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.clear {
+  zoom: 1;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.fl,.pull-left {
+  float: left;
+}
+.fr,.pull-right {
+  float: right;
+}
+.section {
+  width: 100%;
+  position: relative;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.full-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+.loading-bar {
+  position: absolute;
+  z-index: 400;
+  width: 100%;
+  height: 2px;
+  left: 0px;
+  top: 0px;
+  span.press {
+    display: block;
+    float: left;
+    width: 0%;
+    height: 100%;
+    background-color: #409EFF;
+    transition: all 0.4s cubic-bezier(.55,0,.1,1);
+  }
+}
+
+.loading-bar.loading span.press {
+  width: 10%;
+  opacity: 1;
+}
+
+.loading-bar.end span.press {
+  width: 100%;
+  opacity: 1;
+}
+
+.loading-bar.hide span.press {
+  opacity: 0;
+  width: 100%;
+}
+
+.loading-bar.normal span.press {
+  opacity: 0;
+  width: 0%;
+}
