@@ -2,33 +2,32 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import store from './vuex/index'
+import api from './util/api'
 
 import {
   Button, Select, Dropdown,
   DropdownItem, DropdownMenu,
   Menu, MenuItem, MenuItemGroup,
-  Submenu
+  Submenu, Form, FormItem, Input
 } from 'element-ui';
 
 let eleElements = [
   Button, Select, Dropdown,
   DropdownItem, DropdownMenu,
   Menu, MenuItem, MenuItemGroup,
-  Submenu
+  Submenu, Form, FormItem, Input
 ]
 
 eleElements.forEach(val=>{
   Vue.use(val)
 })
 
+Vue.use(api)
 
 
 router.beforeEach((to, from, next)=>{
-
   store.commit('nowStatus', 'loading')
-
   next();
-
 })
 
 router.afterEach(()=>{

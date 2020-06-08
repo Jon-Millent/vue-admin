@@ -35,11 +35,11 @@
         </div>
 
         <div class="main-content">
-            <div class="tool-bar">
+            <div class="tool-bar scroll-y scroll-bar">
                 <el-menu
                         :default-active="activeRouter"
-                        @select="menuOpen"
-                        >
+                        active-text-color="#2c9264"
+                        @select="menuOpen">
                     <el-menu-item index="setting">
                         <i class="el-icon-menu"></i>
                         <span slot="title">设置</span>

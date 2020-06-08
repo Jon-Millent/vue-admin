@@ -23,6 +23,16 @@ export default new Router({
           name: 'about'
         }
       ]
+    },
+    {
+      path: '/login',
+      component: ()=> import('../views/user/login.vue'),
+      name: 'login'
+    },
+    {
+      path: '*',
+      component: ()=> import('../views/warn/404.vue'),
+      name: '404',
     }
   ]
 })
